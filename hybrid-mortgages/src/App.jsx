@@ -15,6 +15,6 @@ function App() {
       {/* <Form /> */}
       <NewMortgage />
     </>
-
-
+  );
+}
 export default App;
