@@ -8,7 +8,7 @@ export default function LandingPage() {
         <Button colorScheme="teal" size="lg">
           New Customer
         </Button>
-        <Button colorScheme="teal" size="lg" onClick={<Mortgage />}>
+        <Button colorScheme="teal" size="lg">
           Existing Customer
         </Button>
       </Stack>
