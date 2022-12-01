@@ -13,17 +13,33 @@ import {
   StatArrow,
   StatGroup,
 } from "@chakra-ui/react";
+import {
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+} from "@chakra-ui/react";
+import { useState } from "react";
 
 export default function Mortgage() {
+  const format = (val) => `£` + val;
+  const parse = (val) => val.replace(/^\£/, "");
+
+  const [value, setValue] = useState("500");
   return (
     <Container>
-      <Box maxW="lg" borderWidth="10px" borderRadius="lg" overflow="hidden">
-        <p>Monthly Payment</p>
-        <Editable defaultValue="£500">
-          <EditablePreview />
-          <EditableTextarea />
-        </Editable>
-      </Box>
+      <NumberInput
+        onChange={(valueString) => setValue(parse(valueString))}
+        value={format(value)}
+        max={5000}
+      >
+        <NumberInputField />
+        <NumberInputStepper>
+          <NumberIncrementStepper />
+          <NumberDecrementStepper />
+        </NumberInputStepper>
+      </NumberInput>
       <Box maxW="lg" borderWidth="10px" borderRadius="lg" overflow="hidden">
         <Stat>
           <StatLabel>Mortgage Term</StatLabel>
