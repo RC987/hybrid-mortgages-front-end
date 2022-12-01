@@ -66,7 +66,6 @@ export default function Mortgage() {
           <StatNumber>£275,000.00</StatNumber>
         </Stat>
       </Box>
-      <Button>Update</Button>
     </Container>
   );
 }
