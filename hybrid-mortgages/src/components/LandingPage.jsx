@@ -1,3 +1,5 @@
+
+import Mortgage from "./Mortgage";
 import { Button, ButtonGroup, Stack } from "@chakra-ui/react";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 
@@ -6,7 +8,6 @@ import ExistingCustomer from "./ExistingCustomer";
 import NewCustomer from "./NewCustomer";
 // import About component
 // import About from "./components/About";
-
 
 export default function LandingPage() {
 
