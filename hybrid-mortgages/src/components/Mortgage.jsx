@@ -1,4 +1,4 @@
-import { Container, Box, VStack } from "@chakra-ui/react";
+import { Container, Box, VStack, Button } from "@chakra-ui/react";
 import {
   Editable,
   EditableInput,
@@ -32,9 +32,19 @@ export default function Mortgage() {
           <StatHelpText>01 Dec</StatHelpText>
         </Stat>
       </Box>
-      {/* <VStack>
-        <Button {...saveButtonProps}>Save</Button>
-      </VStack> */}
+      <Box>
+        <Stat>
+          <StatLabel>Remaining Balance</StatLabel>
+          <StatNumber>£93,000.00</StatNumber>
+        </Stat>
+      </Box>
+      <Box>
+        <Stat>
+          <StatLabel>Total Balance</StatLabel>
+          <StatNumber>£275,000.00</StatNumber>
+        </Stat>
+      </Box>
+      <Button>Update</Button>
     </Container>
   );
 }
