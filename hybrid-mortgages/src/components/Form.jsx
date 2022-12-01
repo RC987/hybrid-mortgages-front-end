@@ -6,8 +6,20 @@ import {
   Input,
   Button,
 } from "@chakra-ui/react";
+import {
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+} from "@chakra-ui/react";
+import { useState } from "react";
 
 export default function Form() {
+  const format = (val) => `£` + val;
+  const parse = (val) => val.replace(/^\£/, "");
+
+  const [value, setValue] = useState("0.00");
   return (
     <>
       <FormControl isRequired>
@@ -30,10 +42,18 @@ export default function Form() {
         <FormLabel>Address</FormLabel>
         <Input placeholder="Address" />
       </FormControl>
-      <FormControl isRequired>
-        <FormLabel>Annual Salary</FormLabel>
-        <Input placeholder="Salary" />
-      </FormControl>
+      <p>Anuual Income:</p>
+      <NumberInput
+        onChange={(valueString) => setValue(parse(valueString))}
+        value={format(value)}
+        max={10000000}
+      >
+        <NumberInputField />
+        <NumberInputStepper>
+          <NumberIncrementStepper />
+          <NumberDecrementStepper />
+        </NumberInputStepper>
+      </NumberInput>
       <Button>Save</Button>
     </>
   );
