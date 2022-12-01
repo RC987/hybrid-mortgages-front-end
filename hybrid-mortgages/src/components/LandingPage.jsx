@@ -1,6 +1,27 @@
 import { Button, ButtonGroup, Stack } from "@chakra-ui/react";
+import {Routes, Route, useNavigate} from 'react-router-dom';
+
+// import Home component
+import ExistingCustomer from "./ExistingCustomer";
+// import About component
+// import About from "./components/About";
+
 
 export default function LandingPage() {
+
+  // const navigate = useNavigate();
+
+  // const navigateToContacts = () => {
+  //   // 👇️ navigate to /contacts
+  //   navigate('/ExistingCustomer');
+  // };
+
+  // const navigateHome = () => {
+  //   // 👇️ navigate to /
+  //   navigate('/NewCustomer');
+  // };
+
+
   return (
     <>
       <Stack spacing={4} direction="row" align="center">
@@ -8,9 +29,15 @@ export default function LandingPage() {
           New Customer
         </Button>
         <Button colorScheme="teal" size="lg">
-          Exsisitng Customer
+          Existing Customer
         </Button>
       </Stack>
     </>
   );
 }
+
+
+
+
+
+
