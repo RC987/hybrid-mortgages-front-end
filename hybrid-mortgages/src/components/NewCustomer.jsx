@@ -5,7 +5,7 @@ export default function NewCustomer() {
 
   return (
     <h1>
-      Hello NewCustomer Customer 
+      Hello New Customer 
     </h1>
   );
 }

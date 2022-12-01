@@ -1,19 +1,12 @@
 import "./App.css";
 import LandingPage from "./components/LandingPage";
+import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
   return (
-    <>
+    <Router>
       <LandingPage />
-      <Router>
-        <Switch>
-          {/* This route is for home component 
-          with exact path "/", in component props 
-          we passes the imported component*/}
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </Router>
-    </>
+    </Router>
   );
 }
 
