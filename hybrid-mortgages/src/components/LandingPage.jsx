@@ -1,4 +1,5 @@
-import { Button, ButtonGroup, Stack } from "@chakra-ui/react";
+import { Button, Stack } from "@chakra-ui/react";
+import Mortgage from "./Mortgage";
 
 export default function LandingPage() {
   return (
@@ -7,8 +8,8 @@ export default function LandingPage() {
         <Button colorScheme="teal" size="lg">
           New Customer
         </Button>
-        <Button colorScheme="teal" size="lg">
-          Exsisitng Customer
+        <Button colorScheme="teal" size="lg" onClick={<Mortgage />}>
+          Existing Customer
         </Button>
       </Stack>
     </>
