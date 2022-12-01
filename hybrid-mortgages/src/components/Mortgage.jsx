@@ -29,6 +29,7 @@ export default function Mortgage() {
   const [value, setValue] = useState("500");
   return (
     <Container>
+      <p>Monthly Payment</p>
       <NumberInput
         onChange={(valueString) => setValue(parse(valueString))}
         value={format(value)}
