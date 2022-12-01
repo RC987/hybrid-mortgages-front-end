@@ -26,6 +26,13 @@ export default function Mortgage() {
       </Box>
       <Box maxW="lg" borderWidth="10px" borderRadius="lg" overflow="hidden">
         <Stat>
+          <StatLabel>Mortgage Term</StatLabel>
+          <StatNumber>25 years</StatNumber>
+          <StatArrow type="increase" />
+        </Stat>
+      </Box>
+      <Box maxW="lg" borderWidth="10px" borderRadius="lg" overflow="hidden">
+        <Stat>
           <StatLabel>Current Interest Rate</StatLabel>
           <StatNumber>3%</StatNumber>
           <StatArrow type="increase" />
